@@ -1,0 +1,43 @@
+{
+  "name": "@texoport/base",
+  "version": "0.0.2",
+  "description": "Things I can't be bothered to create every time.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saiashirwad/base.git"
+  },
+  "author": "Sai Ashirwad <saiashirwadr@gmail.com>",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "publish-patch": "npm run build && npm version patch && npm publish",
+    "build": "tsup",
+    "lint": "tsc",
+    "test": "bun test"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.8.3",
+    "@types/bun": "latest",
+    "tsup": "^8.2.3"
+  },
+  "peerDependencies": {
+    "typescript": "^5.5.3"
+  },
+  "main": "index.js",
+  "bugs": {
+    "url": "https://github.com/saiashirwad/base/issues"
+  },
+  "homepage": "https://github.com/saiashirwad/base#readme",
+  "trustedDependencies": [
+    "@biomejs/biome"
+  ]
+}
